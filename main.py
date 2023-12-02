@@ -1,4 +1,5 @@
 import pygame
+
 from random import randint
 
 x_size = 800
