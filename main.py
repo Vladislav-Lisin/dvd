@@ -14,6 +14,7 @@ y = randint(0, y_size - height)
 vector = 1
 colour = (randint(0, 255), randint(0, 255), randint(0, 255))
 zn = 1
+img = pygame.image.load('pngwing.com (1).jpg')
 
 pygame.display.set_caption("Загрузка")
 size = vx, vx1 = x_size, y_size
@@ -25,7 +26,7 @@ while zn:
         if event.type == pygame.QUIT:
             zn = 0
 
-    if y < 0:
+    if y < 0: 
         colour= (randint(0, 255), randint(0, 255), randint(0, 255))
         if vector == 3:
             vector = 2
@@ -43,7 +44,7 @@ while zn:
             vector = 1
         elif vector == 3:
             vector = 4
-    elif y > y_size - height:
+    elif y > y_size - height: 
         colour = (randint(0, 255), randint(0, 255), randint(0, 255))
         if vector == 1:
             vector = 4
@@ -65,6 +66,7 @@ while zn:
     screen.fill((0, 0, 0))
     pygame.time.delay(30)
     pygame.draw.rect(screen, colour, (x, y, length, height))
+    screen.blit(img,(x,y))
 
     pygame.display.flip()
 
